@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Pit Stop — The Future of F1 Strategy 🏎️
 
 ![Pit Stop Banner](docs/images/banner.png)
