@@ -36,6 +36,7 @@ graph TD
 ```
 
 ### Project Structure
+
 ```text
 ├── .github/workflows/
 │   └── pipeline.yml         # CI/CD: Tests, Trains, and Commits updates
