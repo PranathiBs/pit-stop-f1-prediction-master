@@ -133,7 +133,7 @@ export async function GET(req: NextRequest) {
                 wins: entry.positions.filter(p => p === 1).length,
                 podiums: entry.positions.filter(p => p <= 3 && p >= 1).length,
                 dnfs: entry.dnfs,
-                races: entry.positions.length,
+                raceCount: entry.positions.length,
                 recent_form: last10,
                 updated_at: new Date().toISOString(),
             });
@@ -148,9 +148,9 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({
             ok: true,
             year,
-            races: raceList.length,
-            results: resultRows.length,
-            drivers: consistencyRows.length,
+            raceCount: raceList?.length || 0,
+            resultCount: resultRows?.length || 0,
+            driverCount: consistencyRows?.length || 0,
             log,
         });
 
